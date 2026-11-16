@@ -31,7 +31,11 @@ if [ -z "${ADMIN_EMAIL:-}" ]; then
   exit 1
 fi
 
-# Waits for the database, applies migrations and creates the cache table.
+# On a fresh deploy the database and its private host name can take a minute
+# to come up, and Flagsmith's own wait gives up after 5 seconds. Wait longer.
+flagsmith waitfordb --waitfor "${DB_WAIT_SECONDS:-180}"
+
+# Applies migrations and creates the cache table.
 flagsmith migrate
 
 # Creates the first admin, organisation and project, only while no user exists yet.
