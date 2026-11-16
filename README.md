@@ -1,3 +1,5 @@
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/flagsmith-1?utm_medium=integration&utm_source=button&utm_campaign=flagsmith)
+
 # Flagsmith on Railway
 
 A Railway template for [Flagsmith](https://www.flagsmith.com/), the open-source feature flag and remote config platform. It deploys the Flagsmith API and dashboard (one service) with a PostgreSQL database, so the apps in your Railway project can read their flags over the private network.
