@@ -27,7 +27,7 @@ A Railway template for [Flagsmith](https://www.flagsmith.com/), the open-source 
 | `DJANGO_CSRF_TRUSTED_ORIGINS` | `https://${{RAILWAY_PUBLIC_DOMAIN}}` | Lets the Django admin at `/admin/` accept logins |
 | `PORT` | `8000` | Port the server listens on |
 
-Optional settings (SMTP e-mail, OAuth, the task processor, open sign-up) are documented in [Flagsmith's API settings](https://docs.flagsmith.com/deployment/hosting/locally-api#environment-variables). Add them as service variables; any variable you set wins over the wrapper's defaults.
+Optional settings (SMTP e-mail, OAuth, the task processor, open sign-up) are documented in [Flagsmith's environment variables](https://docs.flagsmith.com/deployment-self-hosting/core-configuration/environment-variables). Add them as service variables; any variable you set wins over the wrapper's defaults.
 
 ## Using it from your other Railway services
 
